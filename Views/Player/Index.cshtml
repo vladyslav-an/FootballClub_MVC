@@ -1,0 +1,31 @@
+
+@model List<TestDemo.Models.Player>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>All Players</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>ClubName</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (Player player in Model)
+        {
+            <tr>
+                <th>@player.Id</th>
+                <th>@player.FirstName</th>
+                <th>@player.LastName</th>
+                <th>@player.ClubName</th>
+            </tr>
+        }
+    </tbody>
+</table>

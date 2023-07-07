@@ -1,0 +1,27 @@
+@model Club;
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Actions With Clubs</h2>
+
+@using (Html.BeginForm("GetClub", "Club", FormMethod.Post))
+{
+    <div>
+        <label>Get Club By Name</label><br/>
+        <input asp-for="Name" type="text" name="Name"/>
+        <input type="submit" value="get club">
+    </div>
+}
+
+@using (Html.BeginForm("CreateClub", "Club", FormMethod.Post))
+{
+    <div>
+        <label>Create Club</label><br/>
+        <input asp-for="Name" type="text" name="Name"/>
+        <input asp-for="League" type="text" name="League"/>
+        <input type="submit" value="create club">
+    </div>
+}

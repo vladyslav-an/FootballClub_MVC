@@ -1,0 +1,38 @@
+@model TestDemo.Models.Player;
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Actions With Players</h2>
+
+@using (Html.BeginForm("GetPlayer", "Player", FormMethod.Post))
+{
+    <div>
+        <label>Get Player By Id</label><br/>
+        <input asp-for="Id" type="number" name="Id"/>
+        <input type="submit" value="get player">
+    </div>
+}
+
+@using (Html.BeginForm("GetPlayersByClub", "Player", FormMethod.Post))
+{
+    <div>
+        <label>Get Player By Club</label><br/>
+        <input asp-for="ClubName" type="text" name="ClubName"/>
+        <input type="submit" value="get players">
+    </div>
+}
+
+@using (Html.BeginForm("CreatePlayer", "Player", FormMethod.Post))
+{
+    <div>
+        <label>Create Player</label><br/>
+        <input asp-for="FirstName" type="text" name="FirstName"/>
+        <input asp-for="LastName" type="text" name="LastName"/>
+        <input asp-for="ClubName" type="text" name="ClubName"/>
+        <input type="submit" value="create player">
+    </div>
+}
+

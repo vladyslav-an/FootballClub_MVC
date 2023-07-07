@@ -1,0 +1,26 @@
+@model List<Club>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>All Clubs</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>League</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (Club club in Model)
+        {
+            <tr>
+                <th>@club.Name</th>
+                <th>@club.League</th>
+            </tr>
+        }
+    </tbody>
+</table>

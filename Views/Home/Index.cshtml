@@ -1,0 +1,22 @@
+﻿@using TestDemo.Controllers
+@model TestDemo.Controllers.SomeData
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <td>
+        @ViewData["Name"];
+        /
+        @ViewData["Age"];
+    </td>
+</div>
+@using (Html.BeginForm("SetData", "Home", FormMethod.Post))
+{
+    <div>
+        <input asp-for="Name" type="text" name="Name"/>
+        <input asp-for="Age" type="number" name="age"/>
+        <input type="submit" value="click me">
+    </div>
+}

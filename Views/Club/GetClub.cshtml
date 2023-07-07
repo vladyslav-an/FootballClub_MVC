@@ -1,0 +1,23 @@
+@model Club
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Getted Club</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>League</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>@Model.Name</th>
+            <th>@Model.League</th>
+        </tr>
+    </tbody>
+</table>
